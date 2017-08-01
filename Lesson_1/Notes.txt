@@ -1,0 +1,67 @@
+World Wide Web vs Internet - 
+
+The internet: 
+- Interconnected networks (billions) all over the world work together to share info
+
+The internet uses many methods to transfer information. The most common is the WWW. Uses HTTP to transfer data.
+We use Uniform Resource Locators (URLs) to access this information through a web browser
+
+Two main components:
+1. Server
+- Stores a lot of files
+2. Client
+- Accesses these files
+
+Domain names:
+Easy to read (human) name for a website
+WWW uses DNS to convert the domain name into an IP Address, take you to the site
+
+Client -> domain name -> DNS -> IP Address -> Server -> Back to Client
+
+Intro to programming -
+
+Wireframes:
+Blueprint of a website. Shows how a user can navigate the different pages, etc. Similar to a mockup?
+Example picture in folder
+
+Wireframes are passed to visual designers (look and feel, color, typography, layout, etc.) and developer teams
+simultaneously.
+
+Developers:
+Front-end bring the website to life. HTML, CSS, JS.
+Back-end write code to manage and interact with DBs. PHP, Python, and Ruby are examples.
+
+Front-end handles experience. Drop down menus, inline validation, etc.
+Back-end handles routing. Displaying correct web pages, logging in/out, updating information, etc.
+
+Front to back:
+
+Bank example -
+1. User navigates to bank website
+ - Everything on screen is front-end including login prompt
+ - Login request triggers back-end code
+2. Back-end verifies login and kicks account information back to front-end
+3. Front-end displays all account info to customer
+
+Think like a developer -
+
+Plan ahead:
+Have a layout. Create every part of your website one piece at a time, ensuring each piece is functional before moving
+onto the next
+
+Give everything useful, descriptive, simple names. duck.jpg. Use conventions. Perhaps only use lowercase letters so you
+always know.
+
+Google everything. Use:
+w3schools.com
+codepen.io
+stackoverflow.com
+
+Inspect element feature in chrome is useful for viewing code on any website
+
+Additional resource:
+https://developer.mozilla.org/en-US/
+https://validator.w3.org/
+http://csslint.net/
+http://jslint.com/
+JSBin, JSFiddle, repl.it for online code editing
