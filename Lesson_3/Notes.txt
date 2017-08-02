@@ -1,0 +1,45 @@
+HTML -
+More or less a standardized list of instructions that browsers use to display elements
+
+HyperText				Markup					Language
+Software that			A system for			A system of
+lets you 				annotating text 		communicating for
+connect and 									web entities (standardized)
+share filed						
+over the 
+Internet	
+
+Building blocks of HTML:
+element tags! <tag name>content</tag name>
+
+Most tags have opening and closing tags. Content is what the user will eventually see, tag typically affects this content
+in some way.
+
+Elements are the building blocks of websites.
+
+HTML Elements:
+heading tags
+<h1> - <h6> (in order of size)
+Used for titles (headings)
+
+<h1> - title of site
+<h2> - Subtitle of site
+<h3> - Section headings
+<h4> - Section sub-headings
+...
+
+<p>: Paragraph tag. Used to create paragraphs within your page.
+<a>: Anchor tag. Used for links when combined with attribtue href
+	-> <a href="https://www.google.com">link text</a>
+
+HTML boilerplate:
+<!DOCTYPE html> <- tells browser you are using most recent HTML version
+<html>
+	<head> <- behind scenes stuff and title
+		<title></title>
+	</head>
+	<body> <- Essentially everything the user will see
+	</body>
+</html>
+
+Must have the boilerplate, yo. Don't forget html + tab in Sublime.
