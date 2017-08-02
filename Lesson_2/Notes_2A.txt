@@ -1,0 +1,108 @@
+Command line interface (CLI) -
+
+Will be using the primary Linux, Mac OS shell (Bash)
+
+Text editors and Web Browsers -
+
+Text editors:
+1. Sublime
+2. Atom
+
+Web browsers:
+1. Chrome
+2. Firefox
+3. Safari
+4. Internet Explorer
+5. Opera
+
+Sublime -
+html + tab gives you boilerplate code
+lorem + tab gives you fake content if you are trying to test layouts
+
+ctrl+ zooms in, ctrl- zooms out
+shift + f11 (Mac cmd + ctrl + shift + f): distraction free mode. Cmd + K + Cmd + B( brings back side bar
+ctrl + p/cmd + p opens new file
+option + cmd + 2 gives you a second column to work with. option + up + 2 on PC
+
+Go to line: Ctrl/cmd + P -> enter filename + ':' + line number
+Ctrl + F finds text
+
+Select entire line: click anywhere in line, Cmd/Ctrl + l
+
+Switch two lines: ctrl + cmd/shift + up/down
+
+Select everything in a tag: click on tag, cmd/ctrl + shift + a
+
+everything with similar indentation: cmd/ctrl + shift + j
+change indentation of block: cmd/ctrl and cycle between bracket buttons
+
+Cmd/Ctrl + C: copies
+Cmd/Ctrl + V: pastes
+Cmd/Ctrl + Shift + V: paste with exact indentation
+
+Cmd/Ctrl + D: highlight word and hit this to select next example of that word (multiple cursors) every time you enter this
+Cmd/Ctrl + click: create more cursors. Can do this down the line
+
+Ctrl + Shift + K: delete entire line
+
+Cmd/Ctrl + Z: undo
+Cmd/Ctrl + Y: redo
+
+Highlight chunks of code, Cmd/Ctrl + /: comments out chunk
+
+File System -
+
+File system is the way your computer organizes files. Some terms:
+1. Directories:
+folders = directories. 
+2. Subdirectory:
+Directory within another directory = subdirectory. 
+3. Parent Directory:
+The folder the subdirectory is in is the parent directory.
+4. Root Directory:
+The topmost folder in a file system.
+A -> B -> C
+^ root, parent of B
+	 ^ Parent of C, subdirectory of A
+		  ^ subdirectory of B
+
+Absolute and Relative paths -
+Absolute: starts from the root directory. Like giving someone the exact length and width from (0,0) (long/lat) to find your house
+Ex. C:\Users\user\Desktop
+
+Relative: starts from the current directory. Like giving someone turn by turn instructions from where you are on the street
+
+Navigating the Command Line -
+Cmd + Space in Mac: Spotlight. Can search for stuff here easily (applications, files, etc.)
+
+pwd: print working directory. Gives you current directory
+ls: list command. Gives you list of files/subdirectories in current directory
+	-> ls -a: list ALL files in directory, including hidden files (start with .)
+cd: change directory. Changes directory to given argument
+	-> cd ..: go to the parent directory
+
+Flags and arguments:
+command -flag -otherflag
+Note: One dash for short options typically (p, d, etc.) and two dashes for the long name of the option
+
+command argument
+Ex. cd Downloads <- telling cd where to navigate (relative path)
+
+Carmen Sandiego is in Europe!
+
+Controlling Files with CLI:
+
+~ refers to home directory
+
+touch: creates files
+mkdir: creates directories
+cat: prints contents of files in CLI
+mv: moves files from one directory to another. Does not need -r flag to move folders
+	-> mv file targetDirectory/ <- slash at end specifies directory vs file
+cp: copy file/directory
+	-> cp file newFileName
+rm: remove. Delete file
+rmdir: remove directory. Delete empty folder
+-r flag: recursively. Can be used for cp, rm. Will recursively copy/remove all files/folders within a folder as well
+as the folder itself.
+

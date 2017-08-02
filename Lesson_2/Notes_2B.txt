@@ -1,0 +1,15 @@
+Version Control -
+We will be using Git for version control and GitHub as a repo
+
+git init: Initializes directory to track changes
+git status: Gives you the status of your changes vs the state of the repo
+git add X: Adds file 'X' to the list of files that we want to commit next to the repo (staging)
+git commit: Commits all staged files to your repo
+	-> -m flag: Allows you to add a message to the commit
+git log: gives a full history of commits
+git diff: shows diff of files you've edited (before staging)
+
+Note: A single file can have both staged and unstaged changes at the same time.
+
+GitHub -
+Just a simple intro and tells you how to create an account
