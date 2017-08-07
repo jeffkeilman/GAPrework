@@ -1,0 +1,135 @@
+Intro to CSS -
+
+CSS:
+Cascading Style Sheets. Used to make content written in HTML look nice. 
+
+Cascading								Style Sheets
+Used to describe heirarchical			Pages written to tell a
+nature of style sheets  				browser what HTML is supposed
+										to look like
+
+We write our style in sheets for scalability. When you seperate HTML and CSS pages, you can apply one style to many pages.
+
+CSS Rules:
+selector {property: value;}
+^ HTML, Class, or ID
+			^ Declaration
+
+17 standard color names in CSS, 123 non-standard that are generally accepted as standard. Can make 16 mil customer colors.
+
+If you use background color on an anchor tag, it only highlights the anchor. Why?
+
+Check out CSS Zen Garden!
+
+CSS Color:
+
+Two methods to customize color -
+1. RGB (Red, Green, Blue)
+2. Hexadecimal
+
+Mostly choose between the two comes down to personal preference
+
+RGB -
+0-255 for each
+Black = (0,0,0)
+White = (255,255,255)
+Everything else is in between
+
+Hex - 0 1 2 3 4 5 6 7 8 9 A B C D E F
+#RRGGBB
+
+Color names are good for beginners, but more advanced websites will always use Hex or RGB. Why? More possibilities AND browser compatability. Browsers interpret different colors differently. Why not just be specific?
+
+Hex and RGB are essentially the same:
+rgb(255,255,255) = #FFFFFF, where #FFFFFF = #((15*16^0)+(15*16^1))((15*16^0)+(15*16^1))((15*16^0)+(15*16^1))
+
+format for color names, rgb, and hex
+p { color: red; }
+p { color: rgb(255,0,0); }
+p { color: #FF0000; }
+
+rgba, opacity:
+RGBA = RGB + Alpha. Alpha is a measure of opacity -
+rgba(255, 255, 255, .5)
+Alpha can range from 0.0 (totally transparent) to 1.0 (completely opaque)
+
+Fonts and Text -
+
+Font properties:
+1. font-family
+	- Typical fonts used (in Word, similar).
+	- Can specify specific fonts (Arial) or general fonts as a fallback (typically serif, sans-serif, monospace)
+	- Two word font? Use quotes. Ex. "Courier New"
+	- External fonts can be added by linking them to your HTML page! See index.html
+		-> Google Fonts!!!
+2. font-size
+	- A few ways to adjust. Common is px (pixels). Large equals larger text.
+	- Percentages and ems are also valid ways to size, but these are relative sizes, and thus trickier
+3. font-weight
+	- How "heavy" (bold) text is on page.
+	- 100-900, lighter to more bold
+	- can use keywords "normal" and "bold"
+	- 400 roughly equals "normal" and 700 roughly equals "bold" in most browsers
+4. font-style
+	- can use to mess with special styles. Ex. italic
+
+Text properties:
+1. text-align
+	- left, center, right, justify
+2. text-decoration
+	- Can be used to do things like underline and specify "none" for no decoration
+	- Less common are overline and line-through (strikethrough)
+3. text-transform
+	- Can be used to set things to uppercase, lowercase, and capitalize (proper case)
+
+Classes and IDs -
+Class: Group of elements to be styled
+ID: Individual element to be styled
+
+Classes and IDs are referenced as attributes in tags. <tagName attribute="classOrID">
+
+Should I use a class or ID? What about just applying styling to elements instead?
+General rule:
+Go from general -> specific
+
+If you can apply styling to all anchors, do it! If it doesn't make sense and you need to apply it to a group of anchors, do that instead! If that still doesn't make sense and only one anchor needs this style, do that! <- or don't. Probably just use classes.
+
+Generally speaking, a deverloper very rarely uses IDs. It is sometimes better to write style as a class if you think that it might be reused later, even if you are only using it once right now. The exception to this rule is USING IDS FOR DOM MANIPULATION WITH JS!
+
+Files and Folders -
+A bunch of things I was already taught.
+
+rel = relationship
+
+Images:
+img + src attribute to link images to a page.
+
+<img src="images/owl.jpg" />
+
+Two more attributes used to help clear things up in the event of a failure:
+alt: Alternate text displayed if the image doesn't render.
+title: Displayed when hovering over the image
+
+<img src="images/owl.jpg" alt="owl" title="nice pic of owl" />
+
+Two ways to link to pics:
+1. Relative path: src="images/owl"
+2. Absolute path: src="https://www.images.google.com/owl"
+
+Want to use relative path when possible. This allows you to control what happens to the photos better (you won't surprisingly delete them probably). Using relative path is not a guarantee of image rendering. Should always use alt and title just in case.
+
+Choosing the Right Markup -
+Step outside of coding for a minute. Think about how you might do the same thing in a word processor.
+
+A few new, useful tags:
+1. list tags. ul, ol, li
+	-> ul: unordered list
+	-> ol: ordered list (numbered)
+	-> li: used for each member of the list
+	-> 		<ul>
+				<li>hello</li>
+				<li>list</li>
+			</ul>
+
+2. hr: horizontal rule, drops an underline
+3. br: linebreak
