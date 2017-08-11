@@ -1,0 +1,95 @@
+Inline vs. Block Elements -
+Paragraph example:
+
+Inline: A sentence, fragment, etc.
+Block: Paragraph, anything that breaks the flow of the HTML
+
+Can use the Display property to set by Block or Inline manually, but every element has a default value
+
+Block:
+1. <h1> through <h6>
+2. <p>
+3. <ol>
+4. <ul>
+Others...
+
+Inline:
+1. <a>
+2. <img>
+3. <strong>, <em>
+Others...
+
+Ever in doubt? Refer to list in "further readings" section. (Where is that?)
+
+Can use background-color to see display style of any element. Some will only have color behind them, while others will span the entire page regardless of how much text you have.
+
+Semantic Elements:
+
+Used to group and organize content with descriptive names that clearly imply the purpose of the content around which they are wrapped. Use can improve:
+1. Organization: Easier to read your code and update as needed
+2. Optimization: Search engines will be able to better read your code, making it easier for users to find your site.
+3. Accessibility: Screen readers for people with disabilities can more easily navigate your site.
+
+Basic Semantic Elements:
+1. <header> - beginning
+	- Kick off your page with intro content, such as logos, headlines, titles, 
+2. <footer> - end
+	- Wrap the content at the bottom of your web page. Often contains copyright information, links to career pages, contact information, terms of use, etc.
+3. <main> - primary
+	- Primary content on the page - articles, blog posts, images, videos, etc., and live between the <header> and <footer>
+4. <aside> - secondary
+	- Secondary content on the page, also between <header> and <footer>. Supplimental information, recommended stories or archived links.
+
+(see example pic)
+
+Lack specificity, but there are additional elements that can help fix that!
+
+Within main semantic elements, you can add more:
+1. <nav>
+	- Any navigational links that help users get around your page
+2. <section>
+	- Groups the content of the page into related chunks
+3. <article>
+	- Used to contain standalone blocks of text, such as news articles, blog posts, etc.
+
+<main> is the only semantic element that absolutely should only appear once. The rest can be used multiple times, but should be identified by class or ID attributes.
+
+The Box Model -
+
+Div and Span:
+1. <span>
+	- An inline element used to apply CSS to inline HTML
+2. <div>
+	- A block element used to apply CSS to blocks of HTML; typically wraps big sections of content on a page
+
+Both of these are "Generic Content Wrappers."
+
+Everything is a box!
+Every element contains:
+1. Content within the box
+	- height and width set by "height" and "width" properties
+2. Padding, or area outside of the content
+3. Border, or the line between padding and margin
+4. Margin, or the area outside the border that seperates the element from other elements on the page
+^ Padding, border, margin all have top, bottom, left, and right properties. Ex. "padding-left"
+
+Short hand: 
+Padding: 10px 10px 10px 10px;
+top, right, bottom, left < IMPORTANT always the order. Clockwise from the top, or "TRouBLe"
+OR if they are all the same:
+Padding: 10px;
+
+Can also set left and right, top and bottom to one thing:
+Padding: 0 20px;
+top and bottom are 0, left and right are 20px
+
+Border: 10px black solid;
+^ all same measurements, all sides black, all sides solid
+
+Margins:
+Can set left and right to "auto" in order to center an element. Will take all remaining space after an element and distribute it evenly on the left and right sides.
+
+Header, Footer, Nav -
+Will want to substitute useful semantic elements where possible instead of just using div and span
+
+header, footer, and nav all have meaning to browser and also anyone looking at your HTML.
