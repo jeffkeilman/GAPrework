@@ -1,0 +1,110 @@
+Navigation and Page Layout -
+Sitemap/user flow: Helps illustrate the paths a user can take through your website based on their goals (see example).
+
+Can help to first build out a Navigation bar to help bring the Sitemap to life. Use the <nav> </nav> elements for your navigation bar. Can appear vertically, horizontally, or as an alternatively styled block.
+
+ex:
+<body>
+<header>
+<h1>Elk Web Design</h1>
+<nav>
+<a href="#">work</a>
+<a href="#">about</a>
+<a href="#">contact</a>
+</nav>
+
+Vertical Navigation:
+reset.css - Can be dropped in the css folder of any project and linked in head to eliminate all standard formatting. Can be useful.
+
+Some people like to put vertical navigation links in lists. We don't do that in the class.
+
+Block level styles are useful for these types of links.
+
+Can use a pseudo-class to apply style to something when a certain condition is met (CSS).
+
+Ex.
+selector:pseudo-class {
+	property: value;
+}
+
+a:hover {
+	font-color: red;
+}
+
+Floating and Clearing -
+By default, block elements stack on top of each other on after another.
+
+Floats can be used to move elements horizontally. float left will get block elements to lineup similar to inline elements.
+Float right reverses this. 
+
+Why use floats? We CAN provide height and width to block elements, but NOT inline elements! Floats can be used as a way of getting around this. Three common use cases for floats:
+
+1. Column layouts
+column 1  |  column 2  |  column 3
+
+2. Text wraps (old school image wrapping)
+
+3. Horizontal navigation
+
+float issues:
+1. Floated elements don't add to the height of their parent elements.
+2. Objects further down the page have no idea where to go.
+	-> Anything below floated elements will treat those elements as if they don't exist.
+
+How do we prevent this?
+
+CLEAR! clear:both - Tells the broswer that you've floated elements, and that the next element should begin on its own new line.
+
+.footerClass: {
+	...
+	clear: both;
+}
+
+Works great for some things, but won't work for everything. How about image example?
+
+If you only have one paragraph (small), the text will not wrap the image and any border material you might have had will now display awkwardly behind the image:
+
+borderborderborderborderborderborderborderborderborderborderborderborderborder
+bor	<pic pic pic pic pic	lorem ipsum text text text some more Text   border
+bor	 pic pic pic pic pic	more text yet even more Text                border
+bor	 pic pic pic pic pic	Uh oh! Text is running out                  border
+bor	 pic pic pic pic pic borderborderborderborderborderborderborderborderborde
+	 pic pic pic pic pic>
+
+Can fix this with a similar thing. Create CLEARFIX class
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+Column Layout - 
+
+When our page has multiple block sections at the same verticle height.
+
+When using two columns, for instance, you actually have a parent block made up of two smaller blocks:
+
+11111111111111111111111111111111111222222222222222222222
+11111111111111111111111111111111111222222222222222222222
+11111111111111111111111111111111111222222222222222222222
+11111111111111111111111111111111111222222222222222222222
+11111111111111111111111111111111111222222222222222222222
+11111111111111111111111111111111111222222222222222222222
+11111111111111111111111111111111111222222222222222222222
+11111111111111111111111111111111111222222222222222222222
+
+^ these two are actually one block with two sub blocks inside
+
+1. Add second heading and paragraph to body. This will become side bar. (first content has class/id. Perhaps #content)
+2. Wrap that content in an <aside> element. Specially formatted HTML tag for 
+this purpose.
+3. Wrap both original content (now "left block") and new content in another div. Call this "wrapper" with an id. <div id="wrapper">
+
+Float main content and aside content left and right. 
+
+Clear wrapping container, use clearfix
+
