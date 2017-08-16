@@ -1,0 +1,107 @@
+Intro to Javascript -
+
+What is programmatic thinking?
+1. Applying logic to how you solve things?
+2. Stepping through things, thinking it out?
+3. Break down problems, inputs and outputs?
+
+What is programming?
+The process of writing instructions (programs) in the form of code that instructs the computer to do things. Every piece of software was written. Devs break up every action into tiny steps. On top of these tiny steps, you need to think of the best way to instruct the computer.
+
+4 tips for programming:
+1. Remember how to problem solve:
+	- Break down problems, come up with the best solution for a particular situation.
+2. Remember how to break down your code:
+	- Break big ideas into small steps.
+	- Develop strategies for handling errors.
+3. Remember what you are trying to do:
+	- Plan. Keep in mind the final goal.
+	- Pseduocode can come into play here before writing anything real.
+4. Don't be afraid to use resources:
+	- You don't need to know everything. You can learn while you work.
+	- Don't be afraid to reach out to sites/people for help. Programmers do it all the time.
+
+Pseudocode -
+You don't need to write real code when planning. This exercise is simply about putting your ideas into a format that can then be converted to real code. IE: You want something that displays all the steps (more or less) that the computer would take when solving the issue at hand. Ex:
+
+// We want to find the shortest character in Lord of the Rings.
+
+// Compare characterA to characterB
+
+// Take shortest of two, compare that character to characterC
+
+// take shortest of two, continue executing these steps until you have run out of additional characters.
+
+Pseudocode will help you break down the process into the steps you will need to code, really think through the problem, and identify early issues with your logic.
+
+Ex exercise (in lesson):
+
+// Create a website with a pop-up survey that appears when the homepage loads. The user must check off the box "I love Lord of the Rings!" and click "Submit" in order to move on to the next page.
+
+// Survery pops up
+// if "I love Lord of the Rings!" box is checked when user clicks "Submit" button, navigate to next page.
+// else ??? 
+
+// Create a program that lets a player know whether or not he or she has passed the current level in a game. In order to pass the level, the player must have a score of 150 or higher.
+
+// When ??? happens (what is the trigger?), 
+// IF curent score is 150 or higher, inform player that they have beaten the level, transport to next level?
+// ELSE inform player that they haven't beaten the level, keep them here.
+
+
+
+Lesson Exercise:
+
+// Movie discount program
+
+// Check patron age
+// IF patron is 65 or older -> ticket price $6
+// ELSE IF patron is 25 or younger -> ticket price $8
+// ELSE -> ticket price $10
+
+Intro to Variables -
+
+Used to store data types into memory so they can be referenced later.
+
+Most common declaration:
+var quantity;
+^ variable keyword
+		^ variable name
+
+variables are either assigned a value, or otherwise they are undefined. var can take any type of variable from strings, to numbers, to booleans. Can even be used to declare objects because JS is weird. 
+
+Variables can be assigned using the assignment operator (=). It can also be reassigned, same way. 
+
+var lol = "lol";
+lol = "lolol";
+
+console.log(lol);
+	=> lolol
+
+JS is case sensitive. Use camel case. End statements with a semi-colon. 
+
+Data Types -
+I know most of this. 
+
+typeof: used to find the type of a variable.
+
+typeof 5;
+// => "number"
+typeof "Hello";
+// => "string"
+typeof true;
+// => "boolean"
+
+in JS, strings are collections of chars
+
+numbers in JS divided into integers and floats. Can be negative, positive, decimals
+
+Expressions and Evaluations -
+expressions: 3 		+ 		3
+			 ^		^		^
+			Data   operation data
+
+evaluation is what this breaks down to upon execution.
+
+
+
