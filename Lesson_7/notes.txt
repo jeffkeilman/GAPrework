@@ -103,5 +103,31 @@ expressions: 3 		+ 		3
 
 evaluation is what this breaks down to upon execution.
 
+Control Flow -
+We didn't cover any JS control flow. We talked vaguely about what control flow is.
 
+Logical Operators and Booleans -
+Falsey values:
+1. false
+2. 0
+3. "" (empty string)
+4. null
+5. undefined
+6. NaN (not a number)
 
+all of these can be coerced into the value "false." They will also all evaluate as "false" when executing comparisons.
+
+EVERYTHING ELSE is truthy.
+
+Comparisons and Logical Operators and Booleans -
+1 && 1 => 1
+1 && 0 => 0
+
+1 || 1 => 1
+1 || 0 => 1
+
+true && 'potato' => 'potato'
+
+false || 'potato' => false
+
+Conditional Statements -
