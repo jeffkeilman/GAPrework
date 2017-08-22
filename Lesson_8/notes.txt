@@ -1,0 +1,9 @@
+Conditional Statements -
+I know all of this.
+
+Ternary, control flow.
+
+Arrays -
+basics,
+Looping through them,
+a bunch of stuff I know
