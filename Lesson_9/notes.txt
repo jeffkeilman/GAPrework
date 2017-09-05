@@ -1,0 +1,23 @@
+Functions -
+DRY Code:
+Don't Repeat Yourself. Don't re-type code/copy and paste. Use functions. Think about the other people you are working with. If you write the same code in three different places and you know it's there, you know what to update when the time comes. Someone else will not, however. If you find yourself repeating the code you are writing more than once. begin to think about whether or not you should abstract the code into a function.
+
+Function:
+Block of reusable JS statements that can be called anywhere in a program.
+
+Defining and Calling Functions -
+standard func definition:
+var thisIsAFunction = function () {
+	
+}
+
+calling:
+thisIsAFunction();
+
+Parameters and Return Statements -
+
+Scope -
+
+Global vs Local:
+Inside function - local
+Outside function - global
