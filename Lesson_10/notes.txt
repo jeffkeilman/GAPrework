@@ -1,0 +1,74 @@
+Objects -
+Arrays have been useful thus far for storing slightly more complex data, but they are not great for everything. They are inflexible. They are index arranged, and an index can NOT be used as a unique ID (reference key).
+
+Objects: Often called "associative arrays." They tie KEYS to VALUES
+
+1. Bread
+2. Eggs
+3. Milk
+4. Salami
+
+^Key
+   ^Value
+
+Typical object declaration:
+
+var artist = { < object with properties
+	key >firstName: 'Michael',< value
+	lastName: 'Jackson',
+	birthYear: '1958',
+	numberOneHits: 13
+};
+
+dot notation:
+Standard way of accessing JS object properties -
+artist.firstName; // 'Michael'
+
+can be used to update:
+artist.firstName = 'James';
+
+can be used to add a new property:
+artist.numberAlbums = 11;
+
+Methods -
+A function that is part of an object. In essence, methods are the actions that can be performed on objects.
+
+Can use methods to:
+1. Retrieve values of an object's properties to find something out about the object
+2. Update the values of an object's properties
+
+Adding methods is essentially just the same as adding a function:
+
+var myBicycle = {
+	// Properties
+	color: 'brown',
+	model: 'DL165',
+	make: 'Schwin',
+	year: 1976,
+
+	// Method
+	accelerate: function() {
+		console.log('Zoom zoom!');
+	}
+};
+
+Methods are accessed using dot notation.
+
+JSON -
+JavaScript Object Notation. Ideal language for data interchange due to "C" based conventions. Easy for us to read and write, easy for programs to parse and generate. Language agnostic.
+
+We CANNOT transfer objects over a network. Instead, we send plain text that *looks* like JS objects. These can then be parsed on the other end.
+
+JSON.stringify() can be used to convert object literals into JSON strings:
+
+var favoriteMovie = {
+	title: 'The Godfather',
+	director: 'Francis Coppola',
+	year: '1972',
+	imdb: 9.2
+};
+
+favoriteMovie = JSON.stringify(favoriteMovie);
+
+Can use JSON.parse to convert a JSON string into a JS object:
+favoriteMovie = JSON.parse(favoriteMovie);
