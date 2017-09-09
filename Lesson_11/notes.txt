@@ -1,0 +1,151 @@
+The DOM -
+DOM: Domain Object Model
+
+When a browser reads a web page, it creates a copy of that webpage in memory. Modern use of JS allows for a seamless experience. We can update styles, make things appear/disappear, slide things up and down, etc. in real time on the same page.
+
+The DOM allows you to *find* elements:
+ - JS exposes the DOM of browser pages as an object called "document"
+ - This allows us to search through and access elements on the page
+
+The DOM allows you to *get* content:
+ - The DOM makes it easy to access content within a page, especially when you want to find out what information a user has entered into a form field
+ - The answers could include email, first and last name, etc.
+
+The DOM allows you to *set* content:
+ - The DOM allows you to dynamically update the content of HTML elements on your page.
+ - Update text of a header, change src of an image, etc. dynamically in real time
+
+The DOM allows you to add animations and effects:
+ - Drop down menu when a user clicks an icon, Success message when user submits a form, different images to fade in and out as a user scrolls down a page, all can be done with JS!
+
+The DOM allows you to create *event listeners*:
+ - JS lets us react to a user's actions by having the DOM "listen," or "wait" for a user to take some action (trigger an event) before we run a block of code
+ - EX. on click
+
+The DOM is structured like a tree (*DOM tree*). Each element in an HTML document is represented by a *DOM node*.
+
+Inspecting elements in Chrome dev tools (Elements tab), similar is actually just looking at the DOM.
+
+Accessing the DOM -
+Before we can update a page, need to find the elements that we intend to update.
+
+Each element in a page is broken down into a single node. Each of these nodes is an *object* with properties and methods.
+
+Sometimes, we might want to return a NodeList (list of node objects) to find and work with several elements at once. *** getElementsByClassName(), getElementsByTagName(), querySelectorAll() ***
+
+RUNNING LIST OF DOM FUNCTIONS:
+	1. document.getElementById('main-nav'); < finds element with ID 'main-nav' and gives you access to it. Grabs a REFERENCE to the DOM node that is received.
+
+	2. document.querySelector('.special'); < Can be used to find anything using CSS-style selectors. Useful for finding classes. Will ONLY return the first instance! (Cannot be used to grab ref to multiple class instances).
+
+	Another ex. document.querySelector('ul li'); < will return the first <li> that is a descendant of <ul>.
+
+	3. document.getElementsByClassName('complete'); < will return all elements with the class '.complete'
+
+	4. document.getElementsByTagName('li'); < will return all <li> elements
+
+	5. document.querySelectorAll('.complete'); < will return all elements with the class '.complete'
+
+Example questions:
+	1. document.getElementsByClassName('vegetarian');
+	2. document.getElementsByTagName('li');
+	3. document.querySelectorAll('.vegetarian');
+
+Any NodeList is a collection. These can be accessed similarly to arrays. 
+ex.
+	1. var veggie = document.getElementsByClassName('vegetarian');
+	veggie[0-x] to access individual element OR loop over all with a for loop
+	2. var veggie = document.getElementsByClassName('vegetarian')[2]; < individual element returned. Not sure why you would want this.
+
+Traversing the DOM:
+Elements are often nested inside other elements. Relationships between these elements are described using parent/child. Can use *** .parentNode, .nextSibling, .previousSibling, .firstChild, .lastChild *** to access related elements once you have one. Ex.
+	1. document.getElementsByTagName('li')[0].parentNode; < gives you the <ul> element that all of the <li>s in that group are wrapped in
+	2. document.getElementsByTagName('li')[0].nextSibling; < gives you the second <li> in the group.
+	3. document.getElementsByTagName('li')[1].previousSibling; < gives you first <li> in group.
+	4. document.getElementsByTagName('ul')[0].firstChild; < returns first <li> of group.
+	5. document.getElementsByTagName('ul')[0].lastChild; < returns last <li> of group.
+
+
+Manipulating the DOM -
+PROPERTIES:
+	1. innerHTML: Can be used to change the html within an element. Ex.
+	document.getElementsByTagName('li')[0].innerHTML = '<a href="#">Example</a>'; < Changes original content to this. *** WILL DISPLAY FORMATTED HTML AS LINK, ETC. ***
+	Can, of course, store the content in a variable. var lol = document.getElementsByTagName('li')[0].innerHTML;
+
+	2. textContent: Get/Update the text of a given element. Ex.
+	document.getElementsByTagName('li')[0].textContent = 'lol'; < updates the text of this link. *** WILL DISPLAY FORMATTED HTML AS PLAIN TEXT *** Do not expect to be able to input links and have them display correctly (or anything else)
+
+	Adding elements: Three step process
+	3. (1) createElement(): Creates a new element that is blank. Can be store in a variable. Ex. document.createElement('div'); (2) Can be updated with innerHTML or textContent.
+
+	4. (3) Can be added somewhere within the page with the appendChild() method:
+	Adds element as last child of a given parent element. Ex.
+	document.getElementsByTageName('ul')[0].appendChild(newListItem); < becomes last item in list
+
+	5. className: Will associate a class with a given element. Ex.
+	document.getElementById('important').className = 'complete'; < background color of 'important' element is now yellow
+	(in CSS) .complete { background-color: yellow; }
+
+METHODS:
+	1. setAttribute(): Can add/set an attribute for a given element. Ex.
+	document.getElementsByTagName('a')[0].setAttribute('href', 'http://www.google.com');
+
+	2. removeAttribute(): Can remove an attribute from a given element. Ex.
+	document.getElementsByTagName('a')[0].removeAttribute('id');
+
+There are many, many more properties and methods for DOM manipulations. Don't need to memorize everything.
+
+Event Driven Programming -
+When someone clicks on something or takes a certain action, we want other things to happen perhaps. This is event driven programming.
+
+Listening: Waiting for something to which JS can respond to (or react). Classic example is burger menu. When you click the burger menu (event), it should be displayed.
+
+Asynchronicity: The ability to run code out of order. Useful for event handling since we have no idea when these events will be triggered. Will not hold up execution of other code.
+
+Adding event handler:
+element.addEventListener('nameOfEvent', functionToRun);
+
+1. element: DOM node which we want to tie the event to. Ex. Want to trigger an event when a user clicks on a button, the element to tie to would be the button.
+
+2. .addEventListener(): The method we use to tie an event listener to an element.
+
+3. 'nameOfEvent': The event for which we want to listen. Ex. 'click' (I'm sure there are many, standardized events)
+
+4. 'functionToRun': The name of the function we want to run when the event occurs. When we pass a function as an argument, we refer to that function as a *** CALLBACK FUNCTION ***
+Note: No paranthesis will be typed after the name of this function this time.
+
+big list of event types was given. You can google these.
+
+Nifty event: *** blur *** can be used to detect when a user has tabbed away/clicked out of an element. Ex.
+emailInputField.addEventListener('blur', tabAway); < could be useful if you are trying to check if a field was left blank, or if you want to veryify the contents of a field before moving on for example
+
+Please remember, when using the 'this' keyword within a method (function inside an object), 'this' refers to the object within which the method is contained.
+*** HOWEVER *** when executing a callback function, 'this' WILL ACTUALLY REFER TO THE ELEMENT (DOM NODE) THAT OWNS THE CONTEXT. Ex.
+
+<div class='circle'></div>
+
+document.querySelector('.circle').addEventListener('click', turnRed);
+
+var turnRed = function () {
+	this.style.backgroundColor = 'red'; < REFERS TO THE DIV WITH CLASS 'CIRCLE'
+}
+
+Nifty trick with 'this' keyword:
+var circles = document.querySelectorAll('.circle'); // we have all circles in node list now
+
+for (var x = 0; x < circles.length; x++) {
+	circles[x].addEventListener('click', turnRed);
+}
+
+// if we were to just turn ALL .circle elements red upon execution of the function, all circles on page would turn upon clicking one. How do we prevent this?
+
+var turnRed = function () {
+	this.style.backgroundColor = 'red'; // This will ONLY reference the circle we are clicking
+}
+
+Nifty event listener example: Auto-complete (Google style) search bars that begin searching through a database after x number of letters are entered into the search field.
+
+
+
+
+
